@@ -43,9 +43,11 @@ const NewDeviceModal = (props) => {
     const filterDevices = (event) => {
         const inputValue = event.target.value.toLowerCase();
         let searchResults = [];
+
         if(selectedDevice) searchResults.push(selectedDevice);
         searchResults = searchResults.concat(devices.filter(device => device.name.toLowerCase().includes(inputValue) && device != selectedDevice ));
         setFilteredDevices(searchResults);
+        setScrollPosition(0);
     }
 
     const onLeftClicked = () => {

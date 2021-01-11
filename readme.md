@@ -1,0 +1,1 @@
+Zgłaszam Pull Request :-)
